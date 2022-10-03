@@ -18,7 +18,7 @@ public class BlockInit {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, PioneerMod.MODID);
     //blocks go here
     public static final RegistryObject<Block> REDWOOD_PLANKS = register("redwood_planks",
-            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD)),
+            () -> new Block(BlockBehaviour.Properties.of(Material.WOOD).sound(SoundType.WOOD).strength(2.0F, 3.0F)),
             new Item.Properties().tab(PioneerMod.TAB));
 
 
