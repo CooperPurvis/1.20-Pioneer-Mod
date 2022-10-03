@@ -1,3 +1,5 @@
 {
-  "item.pioneermod.cotton": "Cotton"
+  "item.pioneermod.cotton": "Cotton",
+  "block.pioneermod.redwood_planks": "Redwood Planks",
+  "itemGroup.pioneermod": "Pioneer"
 }
