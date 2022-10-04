@@ -3,5 +3,10 @@
   "block.pioneermod.redwood_planks": "Redwood Planks",
   "itemGroup.pioneermod": "Pioneer",
   "item.pioneermod.baked_beans": "Baked Beans",
-  "item.pioneermod.raw_beans": "Beans"
+  "item.pioneermod.raw_beans": "Beans",
+  "item.pioneermod.copper_sword": "Copper Sword",
+  "item.pioneermod.copper_pickaxe": "Copper Pickaxe",
+  "item.pioneermod.copper_axe": "Copper Axe",
+  "item.pioneermod.copper_shovel": "Copper Shovel",
+  "item.pioneermod.copper_hoe": "Copper Hoe"
 }
