@@ -1,5 +1,7 @@
 {
   "item.pioneermod.cotton": "Cotton",
   "block.pioneermod.redwood_planks": "Redwood Planks",
-  "itemGroup.pioneermod": "Pioneer"
+  "itemGroup.pioneermod": "Pioneer",
+  "item.pioneermod.baked_beans": "Baked Beans",
+  "item.pioneermod.raw_beans": "Beans"
 }
