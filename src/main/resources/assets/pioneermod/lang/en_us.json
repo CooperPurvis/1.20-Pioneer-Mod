@@ -8,5 +8,12 @@
   "item.pioneermod.copper_pickaxe": "Copper Pickaxe",
   "item.pioneermod.copper_axe": "Copper Axe",
   "item.pioneermod.copper_shovel": "Copper Shovel",
-  "item.pioneermod.copper_hoe": "Copper Hoe"
+  "item.pioneermod.copper_hoe": "Copper Hoe",
+  "item.pioneermod.raw_bacon": "Raw Bacon",
+  "item.pioneermod.cooked_bacon": "Bacon",
+  "item.pioneermod.moonshine": "Moonshine",
+  "item.pioneermod.copper_helmet": "Copper Helmet",
+  "item.pioneermod.copper_chestplate": "Copper Chestplate",
+  "item.pioneermod.copper_leggings": "Copper Leggings",
+  "item.pioneermod.copper_boots": "Copper Boots"
 }
