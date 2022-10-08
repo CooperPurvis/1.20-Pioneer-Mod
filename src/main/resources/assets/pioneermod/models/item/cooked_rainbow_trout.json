@@ -1,0 +1,6 @@
+{
+  "parent" : "minecraft:item/generated",
+  "textures" : {
+    "layer0" : "pioneermod:items/cooked_rainbow_trout"
+  }
+}

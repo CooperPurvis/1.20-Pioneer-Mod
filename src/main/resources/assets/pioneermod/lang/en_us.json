@@ -15,5 +15,13 @@
   "item.pioneermod.copper_helmet": "Copper Helmet",
   "item.pioneermod.copper_chestplate": "Copper Chestplate",
   "item.pioneermod.copper_leggings": "Copper Leggings",
-  "item.pioneermod.copper_boots": "Copper Boots"
+  "item.pioneermod.copper_boots": "Copper Boots",
+  "item.pioneermod.raw_crab": "Crab",
+  "item.pioneermod.cooked_crab": "Cooked Crab",
+  "item.pioneermod.raw_lobster": "Lobster",
+  "item.pioneermod.cooked_lobster": "Cooked Lobster",
+  "item.pioneermod.canvas": "Canvas",
+  "item.pioneermod.raw_leather": "Raw Leather",
+  "item.pioneermod.raw_rainbow_trout": "Rainbow Trout",
+  "item.pioneermod.cooked_rainbow_trout": "Cooked Rainbow Trout"
 }
