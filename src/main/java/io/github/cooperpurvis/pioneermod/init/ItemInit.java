@@ -61,7 +61,7 @@ public class ItemInit {
     //food properties
     public static class Foods {
         public static final FoodProperties BAKED_BEANS = new FoodProperties.Builder().nutrition(4).saturationMod(0.4f)
-                .effect(() -> new MobEffectInstance(MobEffects.JUMP, 200, 0), 0.1f).build();
+                .effect(() -> new MobEffectInstance(MobEffects.JUMP, 200, 1), 0.1f).build();
         public static final FoodProperties RAW_BEANS = new FoodProperties.Builder().nutrition(1).saturationMod(0.2f).build();
         public static final FoodProperties RAW_BACON = new FoodProperties.Builder().nutrition(2).meat().saturationMod(0.5f).build();
         public static final FoodProperties COOKED_BACON = new FoodProperties.Builder().nutrition(6).meat().saturationMod(1.5f)
@@ -70,7 +70,6 @@ public class ItemInit {
         public static final FoodProperties MOONSHINE = new FoodProperties.Builder().nutrition(1).saturationMod(0.2f)
                 .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 700, 1), 0.33f)
                 .effect(() -> new MobEffectInstance(MobEffects.CONFUSION, 500, 1), 0.15f).build();
-        //todo sprites for seafood
         public static final FoodProperties RAW_CRAB = new FoodProperties.Builder().nutrition(2).meat().saturationMod(0.5f).build();
         public static final FoodProperties COOKED_CRAB = new FoodProperties.Builder().nutrition(5).meat().saturationMod(1.0f)
                 .effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 600, 0), 1.0f).build();

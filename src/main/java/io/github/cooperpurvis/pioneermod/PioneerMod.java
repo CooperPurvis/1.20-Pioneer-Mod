@@ -2,6 +2,7 @@ package io.github.cooperpurvis.pioneermod;
 
 import io.github.cooperpurvis.pioneermod.init.BlockInit;
 import io.github.cooperpurvis.pioneermod.init.ItemInit;
+import io.github.cooperpurvis.pioneermod.init.PaintingInit;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -17,6 +18,7 @@ public class PioneerMod {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
         ItemInit.ITEMS.register(bus);
         BlockInit.BLOCKS.register(bus);
+        PaintingInit.PAINTINGS.register(bus);
 
     }
     //creative mode tab
