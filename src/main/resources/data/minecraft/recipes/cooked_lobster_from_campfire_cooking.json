@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "ingredient": {
+    "item": "pioneermod:raw_lobster"
+  },
+  "result": "pioneermod:cooked_lobster",
+  "experience": 0.35,
+  "cookingtime": 600
+}

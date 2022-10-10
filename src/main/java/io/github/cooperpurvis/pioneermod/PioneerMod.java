@@ -21,6 +21,7 @@ public class PioneerMod {
         PaintingInit.PAINTINGS.register(bus);
 
     }
+
     //creative mode tab
     public static final CreativeModeTab TAB = new CreativeModeTab(MODID) {
         @Override

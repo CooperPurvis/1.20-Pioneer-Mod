@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "pioneermod:raw_rainbow_trout"
+  },
+  "result": "pioneermod:cooked_rainbow_trout",
+  "experience": 0.35,
+  "cookingtime": 100
+}

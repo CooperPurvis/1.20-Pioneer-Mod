@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "ingredient": {
+    "item": "pioneermod:raw_crab"
+  },
+  "result": "pioneermod:cooked_crab",
+  "experience": 0.35,
+  "cookingtime": 600
+}

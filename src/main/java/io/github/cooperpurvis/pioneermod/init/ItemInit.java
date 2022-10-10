@@ -38,7 +38,7 @@ public class ItemInit {
     public static final RegistryObject<Item> RAW_RAINBOW_TROUT = ITEMS.register("raw_rainbow_trout", () -> new Item(props().food(Foods.RAW_RAINBOW_TROUT)));
     public static final RegistryObject<Item> COOKED_RAINBOW_TROUT = ITEMS.register("cooked_rainbow_trout", () -> new Item(props().food(Foods.COOKED_RAINBOW_TROUT)));
     //"potions"
-    public static final RegistryObject<Item> MOONSHINE = ITEMS.register("moonshine", () -> new Item((props().stacksTo(1).food(Foods.MOONSHINE))));
+    public static final RegistryObject<Item> MOONSHINE = ITEMS.register("moonshine", () -> new Item((props().stacksTo(16).food(Foods.MOONSHINE))));
     //tools
     public static final RegistryObject<SwordItem> COPPER_SWORD = ITEMS.register("copper_sword", () -> new SwordItem(ToolTiers.COPPER, 3, -2.5f, props()));
     public static final RegistryObject<PickaxeItem> COPPER_PICKAXE = ITEMS.register("copper_pickaxe", () -> new PickaxeItem(ToolTiers.COPPER, 1, 0, props()));
