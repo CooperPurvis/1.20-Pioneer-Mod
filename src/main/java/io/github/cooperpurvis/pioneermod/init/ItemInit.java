@@ -80,7 +80,7 @@ public class ItemInit {
         public static final FoodProperties COOKED_RAINBOW_TROUT = new FoodProperties.Builder().nutrition(5).meat().saturationMod(1.0f)
                 .effect(() -> new MobEffectInstance(MobEffects.HEALTH_BOOST, 600, 1), 1.0f).build();
     }
-
+//TODO fix pickaxes
         public static class ToolTiers {
             public static final Tier COPPER = new ForgeTier(1, 200, 6.5f, 0.5f, 17, null, () -> Ingredient.of(Items.COPPER_INGOT));
         }
