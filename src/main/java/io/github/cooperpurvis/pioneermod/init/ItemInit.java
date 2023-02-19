@@ -2,18 +2,14 @@ package io.github.cooperpurvis.pioneermod.init;
 
 import io.github.cooperpurvis.pioneermod.PioneerMod;
 import io.github.cooperpurvis.pioneermod.base.ModArmorMaterial;
+import io.github.cooperpurvis.pioneermod.block.BlockInit;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
-import net.minecraft.world.item.alchemy.Potion;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.enchantment.DamageEnchantment;
-import net.minecraft.world.item.enchantment.Enchantment;
-import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraftforge.common.ForgeTier;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -82,7 +78,8 @@ public class ItemInit {
     }
 //TODO fix pickaxes
         public static class ToolTiers {
-            public static final Tier COPPER = new ForgeTier(1, 200, 6.5f, 0.5f, 17, null, () -> Ingredient.of(Items.COPPER_INGOT));
+            public static final Tier COPPER = new ForgeTier(1, 200, 6.5f, 0.5f, 17, BlockInit.Tags.NEEDS_COPPER_TOOL,
+                    () -> Ingredient.of(Items.COPPER_INGOT));
         }
 
         public static class ArmorTiers {

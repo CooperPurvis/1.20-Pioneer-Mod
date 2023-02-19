@@ -1,6 +1,8 @@
 package io.github.cooperpurvis.pioneermod;
 
+import io.github.cooperpurvis.pioneermod.block.BlockInit;
 import io.github.cooperpurvis.pioneermod.init.*;
+import io.github.cooperpurvis.pioneermod.world.feature.ConfiguredFeatureInit;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;

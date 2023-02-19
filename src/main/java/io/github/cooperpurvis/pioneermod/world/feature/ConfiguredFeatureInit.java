@@ -1,12 +1,20 @@
-package io.github.cooperpurvis.pioneermod.init;
+package io.github.cooperpurvis.pioneermod.world.feature;
 
 import com.google.common.base.Suppliers;
 import io.github.cooperpurvis.pioneermod.PioneerMod;
+import io.github.cooperpurvis.pioneermod.block.BlockInit;
 import net.minecraft.core.Registry;
 import net.minecraft.data.worldgen.features.OreFeatures;
+import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
+import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.MegaPineFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.GiantTrunkPlacer;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -26,4 +34,20 @@ public class ConfiguredFeatureInit {
 
     public static final RegistryObject<ConfiguredFeature<?,?>> FOOLS_OVERWORLD_ORE = CONFIGURED_FEATURES.register("fools_overworld_ore",
             () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(FOOLS_OVERWORLD_REPLACEMENT.get(),9)));
+
+
+
+    public static final RegistryObject<ConfiguredFeature<?, ?>> REDWOOD =
+            CONFIGURED_FEATURES.register("redwood", () ->
+                    new ConfiguredFeature<>(Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                            BlockStateProvider.simple(BlockInit.REDWOOD_LOG.get()),
+                            new GiantTrunkPlacer(10,20,7),
+                            BlockStateProvider.simple(BlockInit.REDWOOD_LEAVES.get()),
+                            //todo mess with these numbers
+                            new MegaPineFoliagePlacer(ConstantInt.of(8), ConstantInt.of(8), ConstantInt.of(8)),
+                            new TwoLayersFeatureSize(1,0,2)).build()));
 }
+
+
+
+

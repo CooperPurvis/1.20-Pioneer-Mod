@@ -1,6 +1,7 @@
 package io.github.cooperpurvis.pioneermod.init;
 
 import io.github.cooperpurvis.pioneermod.PioneerMod;
+import io.github.cooperpurvis.pioneermod.world.feature.ConfiguredFeatureInit;
 import net.minecraft.core.Registry;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.placement.*;
