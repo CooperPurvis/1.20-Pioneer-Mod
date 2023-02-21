@@ -82,7 +82,7 @@ public class BlockInit {
             }, new Item.Properties().tab(PioneerMod.TAB));
 
     public static final RegistryObject<Block> REDWOOD_SAPLING = register("redwood_sapling",
-            () -> new SaplingBlock(new RedwoodTreeGrower(),(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES))),
+            () -> new SaplingBlock(new RedwoodTreeGrower(),(BlockBehaviour.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.GRASS))),
             new Item.Properties().tab(PioneerMod.TAB));
 
     public static final RegistryObject<Block> OVERWORLD_FOOLS_ORE = register("overworld_fools_ore",
