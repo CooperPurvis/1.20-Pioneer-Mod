@@ -29,8 +29,17 @@ public class BlockInit {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, PioneerMod.MODID);
     //blocks go here
 
+    //redwood set
+    public static final RegistryObject<Block> REDWOOD_SLAB = register("redwood_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB))
+            , new Item.Properties().tab(PioneerMod.TAB));
+                //todo fix blockstate
+    public static final RegistryObject<Block> REDWOOD_FENCE = register("redwood_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE))
+            , new Item.Properties().tab(PioneerMod.TAB));
     public static final RegistryObject<Block> REDWOOD_PLANKS = register("redwood_planks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)){
+
                 @Override
                 public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
                     return true;
@@ -62,7 +71,7 @@ public class BlockInit {
     public static final RegistryObject<Block> STRIPPED_REDWOOD_WOOD = register("stripped_redwood_wood",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)),
             new Item.Properties().tab(PioneerMod.TAB));
-                //todo fix leaves decaying after growth
+                //todo fix leaves decaying after growth and grey
     public static final RegistryObject<Block> REDWOOD_LEAVES = register("redwood_leaves",
             () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
                 @Override
@@ -80,14 +89,18 @@ public class BlockInit {
                     return 60;
                 }
             }, new Item.Properties().tab(PioneerMod.TAB));
-
+                //todo fix blockstate
     public static final RegistryObject<Block> REDWOOD_SAPLING = register("redwood_sapling",
             () -> new SaplingBlock(new RedwoodTreeGrower(),(BlockBehaviour.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.GRASS))),
             new Item.Properties().tab(PioneerMod.TAB));
 
+    //ores
+
     public static final RegistryObject<Block> OVERWORLD_FOOLS_ORE = register("overworld_fools_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).requiresCorrectToolForDrops().strength(3.0F, 3.0F)),
             new Item.Properties().tab(PioneerMod.TAB));
+
+    //idk wtf this is but it looks really important
 
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> supplier, Item.Properties properties){
         RegistryObject<T> block = BLOCKS.register(name, supplier);

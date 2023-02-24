@@ -1,7 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "all": "pioneermod:blocks/redwood_sapling"
-  },
-  "render_type": "cutout"
+    "cross": "pioneermod:blocks/redwood_sapling"
+  }
 }

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "pioneermod:block/redwood_slab"
+    },
+    "type=double": {
+      "model": "pioneermod:block/redwood_planks"
+    },
+    "type=top": {
+      "model": "pioneermod:block/redwood_slab"
+    }
+  }
+}

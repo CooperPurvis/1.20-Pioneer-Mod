@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cube_column_horizontal",
   "textures": {
-    "end": "pioneermod:block/redwood_log_top",
-    "side": "pioneermod:block/redwood_log"
+    "end": "pioneermod:blocks/redwood_log",
+    "side": "pioneermod:blocks/redwood_log"
   }
 }
