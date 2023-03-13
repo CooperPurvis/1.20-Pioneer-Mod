@@ -1,3 +1,6 @@
 {
-  "parent": "pioneermod:block/redwood_sapling"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "pioneermod:blocks/redwood_sapling"
+  }
 }

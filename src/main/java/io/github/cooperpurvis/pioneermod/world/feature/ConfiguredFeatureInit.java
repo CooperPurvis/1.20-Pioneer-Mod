@@ -27,16 +27,16 @@ public class ConfiguredFeatureInit {
 
     private static final Supplier<List<OreConfiguration.TargetBlockState>> FOOLS_OVERWORLD_REPLACEMENT = Suppliers.memoize(()->
             List.of(
-                    //todo sprite and replace for deepslate and replace sprite for regular
+                    //todo ore loot tables and break speed
                     OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, BlockInit.OVERWORLD_FOOLS_ORE.get().defaultBlockState()),
-                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockInit.REDWOOD_PLANKS.get().defaultBlockState()))
+                    OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, BlockInit.DEEPSLATE_FOOLS_ORE.get().defaultBlockState()))
     );
 
     public static final RegistryObject<ConfiguredFeature<?,?>> FOOLS_OVERWORLD_ORE = CONFIGURED_FEATURES.register("fools_overworld_ore",
             () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(FOOLS_OVERWORLD_REPLACEMENT.get(),9)));
 
 
-
+    //tree grower
     public static final RegistryObject<ConfiguredFeature<?, ?>> REDWOOD =
             CONFIGURED_FEATURES.register("redwood", () ->
                     new ConfiguredFeature<>(Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(

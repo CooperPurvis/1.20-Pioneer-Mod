@@ -21,12 +21,15 @@ public class ItemInit {
     //items
     public static final RegistryObject<Item> COTTON = ITEMS.register("cotton", () -> new Item(props()));
     public static final RegistryObject<Item> CANVAS = ITEMS.register("canvas", () -> new Item(props()));
+    public static final RegistryObject<Item> PYRITE = ITEMS.register("pyrite", () -> new Item(props()));
     public static final RegistryObject<Item> RAW_LEATHER = ITEMS.register("raw_leather", () -> new Item(props()));
     //food register
     public static final RegistryObject<Item> BAKED_BEANS = ITEMS.register("baked_beans", () -> new Item(props().food(Foods.BAKED_BEANS)));
     public static final RegistryObject<Item> RAW_BEANS = ITEMS.register("raw_beans", () -> new Item(props().food(Foods.RAW_BEANS)));
     public static final RegistryObject<Item> RAW_BACON = ITEMS.register("raw_bacon", () -> new Item(props().food(Foods.RAW_BACON)));
     public static final RegistryObject<Item> COOKED_BACON = ITEMS.register("cooked_bacon", () -> new Item(props().food(Foods.COOKED_BACON)));
+    public static final RegistryObject<Item> MOREL_ITEM = ITEMS.register("morel_item", () -> new Item(props().food(Foods.MOREL_ITEM)));
+    //todo fix fishing loot tables
     public static final RegistryObject<Item> RAW_CRAB = ITEMS.register("raw_crab", () -> new Item(props().food(Foods.RAW_CRAB)));
     public static final RegistryObject<Item> COOKED_CRAB = ITEMS.register("cooked_crab", () -> new Item(props().food(Foods.COOKED_CRAB)));
     public static final RegistryObject<Item> RAW_LOBSTER = ITEMS.register("raw_lobster", () -> new Item(props().food(Foods.RAW_LOBSTER)));
@@ -75,8 +78,10 @@ public class ItemInit {
         public static final FoodProperties RAW_RAINBOW_TROUT = new FoodProperties.Builder().nutrition(2).meat().saturationMod(0.5f).build();
         public static final FoodProperties COOKED_RAINBOW_TROUT = new FoodProperties.Builder().nutrition(5).meat().saturationMod(1.0f)
                 .effect(() -> new MobEffectInstance(MobEffects.HEALTH_BOOST, 600, 1), 1.0f).build();
+        public static final FoodProperties MOREL_ITEM = new FoodProperties.Builder().nutrition(4).saturationMod(0.4f)
+                .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 320, 0), 1.0f).alwaysEat().build();
     }
-//TODO fix pickaxes
+
         public static class ToolTiers {
             public static final Tier COPPER = new ForgeTier(1, 200, 6.5f, 0.5f, 17, BlockInit.Tags.NEEDS_COPPER_TOOL,
                     () -> Ingredient.of(Items.COPPER_INGOT));

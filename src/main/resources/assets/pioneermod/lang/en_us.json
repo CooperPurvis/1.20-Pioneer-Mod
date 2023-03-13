@@ -1,5 +1,8 @@
 {
   "item.pioneermod.cotton": "Cotton",
+  "item.pioneermod.pyrite": "Pyrite",
+  "block.pioneermod.morel": "Block Of Morel Mushrooms",
+  "item.pioneermod.morel_item": "Morel Mushrooms",
   "block.pioneermod.redwood_planks": "Redwood Planks",
   "block.pioneermod.redwood_slab": "Redwood Slab",
   "block.pioneermod.redwood_fence": "Redwood Fence",
@@ -32,5 +35,6 @@
   "item.pioneermod.raw_leather": "Raw Leather",
   "item.pioneermod.raw_rainbow_trout": "Rainbow Trout",
   "item.pioneermod.cooked_rainbow_trout": "Cooked Rainbow Trout",
-  "item.pioneermod.overworld_fools_ore": "Fool's Gold Ore"
+  "block.pioneermod.deepslate_fools_ore": "Fool's Gold Ore",
+  "block.pioneermod.overworld_fools_ore": "Fool's Gold Ore"
 }
