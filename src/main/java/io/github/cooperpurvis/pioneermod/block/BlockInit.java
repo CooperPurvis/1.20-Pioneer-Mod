@@ -1,12 +1,11 @@
 package io.github.cooperpurvis.pioneermod.block;
 
 import io.github.cooperpurvis.pioneermod.PioneerMod;
-import io.github.cooperpurvis.pioneermod.block.custom.CustomModelBlock;
+import io.github.cooperpurvis.pioneermod.block.custom.ChanterellesBlock;
+import io.github.cooperpurvis.pioneermod.block.custom.MorelBlock;
 import io.github.cooperpurvis.pioneermod.block.custom.ModFlammableRotatedPillarBlock;
 import io.github.cooperpurvis.pioneermod.init.ItemInit;
 import io.github.cooperpurvis.pioneermod.world.feature.tree.RedwoodTreeGrower;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
@@ -110,7 +109,10 @@ public class BlockInit {
 
     //shroom
     public static final RegistryObject<Block> MOREL = register("morel",
-            () -> new CustomModelBlock(BlockBehaviour.Properties.of(Material.PLANT).dynamicShape().noOcclusion())
+            () -> new MorelBlock(BlockBehaviour.Properties.of(Material.PLANT).dynamicShape().noOcclusion())
+            , new Item.Properties().tab(PioneerMod.TAB));
+    public static final RegistryObject<Block> CHANTERELLES = register("chanterelles",
+            () -> new ChanterellesBlock(BlockBehaviour.Properties.of(Material.PLANT).dynamicShape().noOcclusion())
             , new Item.Properties().tab(PioneerMod.TAB));
 
     //idk wtf this is but it looks really important

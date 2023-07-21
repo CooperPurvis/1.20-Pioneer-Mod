@@ -9,10 +9,10 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class CustomModelBlock extends Block {
+public class MorelBlock extends Block {
     private static final VoxelShape SHAPE = makeShape();
 
-    public CustomModelBlock(Properties properties) {
+    public MorelBlock(Properties properties) {
         super(properties);
     }
 

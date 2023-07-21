@@ -29,6 +29,7 @@ public class ItemInit {
     public static final RegistryObject<Item> RAW_BACON = ITEMS.register("raw_bacon", () -> new Item(props().food(Foods.RAW_BACON)));
     public static final RegistryObject<Item> COOKED_BACON = ITEMS.register("cooked_bacon", () -> new Item(props().food(Foods.COOKED_BACON)));
     public static final RegistryObject<Item> MOREL_ITEM = ITEMS.register("morel_item", () -> new Item(props().food(Foods.MOREL_ITEM)));
+    public static final RegistryObject<Item> CHANTERELLES_ITEM = ITEMS.register("chanterelles_item", () -> new Item(props().food(Foods.CHANTERELLES_ITEM)));
     //todo fix fishing loot tables
     public static final RegistryObject<Item> RAW_CRAB = ITEMS.register("raw_crab", () -> new Item(props().food(Foods.RAW_CRAB)));
     public static final RegistryObject<Item> COOKED_CRAB = ITEMS.register("cooked_crab", () -> new Item(props().food(Foods.COOKED_CRAB)));
@@ -69,6 +70,7 @@ public class ItemInit {
         public static final FoodProperties MOONSHINE = new FoodProperties.Builder().nutrition(1).saturationMod(0.2f)
                 .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 700, 1), 0.33f)
                 .effect(() -> new MobEffectInstance(MobEffects.CONFUSION, 500, 1), 0.15f).build();
+        //seafood
         public static final FoodProperties RAW_CRAB = new FoodProperties.Builder().nutrition(2).meat().saturationMod(0.5f).build();
         public static final FoodProperties COOKED_CRAB = new FoodProperties.Builder().nutrition(5).meat().saturationMod(1.0f)
                 .effect(() -> new MobEffectInstance(MobEffects.WATER_BREATHING, 600, 0), 1.0f).build();
@@ -78,8 +80,11 @@ public class ItemInit {
         public static final FoodProperties RAW_RAINBOW_TROUT = new FoodProperties.Builder().nutrition(2).meat().saturationMod(0.5f).build();
         public static final FoodProperties COOKED_RAINBOW_TROUT = new FoodProperties.Builder().nutrition(5).meat().saturationMod(1.0f)
                 .effect(() -> new MobEffectInstance(MobEffects.HEALTH_BOOST, 600, 1), 1.0f).build();
+        //shrooms
         public static final FoodProperties MOREL_ITEM = new FoodProperties.Builder().nutrition(4).saturationMod(0.4f)
-                .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 320, 0), 1.0f).alwaysEat().build();
+                .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 320, 0), 0.25f).alwaysEat().build();
+        public static final FoodProperties CHANTERELLES_ITEM = new FoodProperties.Builder().nutrition(4).saturationMod(0.4f)
+                .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 320, 0), 0.25f).alwaysEat().build();
     }
 
         public static class ToolTiers {
