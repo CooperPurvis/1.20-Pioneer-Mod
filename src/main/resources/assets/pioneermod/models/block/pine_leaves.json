@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "pioneermod:blocks/pine_leaves"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "age=0": {"model": "pioneermod:block/bean_stage0"},
+    "age=1": {"model": "pioneermod:block/bean_stage1"},
+    "age=2": {"model": "pioneermod:block/bean_stage2"},
+    "age=3": {"model": "pioneermod:block/bean_stage3"},
+    "age=4": {"model": "pioneermod:block/bean_stage4"}
+  }
+}

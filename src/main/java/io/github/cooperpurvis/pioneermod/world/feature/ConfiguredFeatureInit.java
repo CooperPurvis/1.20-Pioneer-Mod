@@ -13,6 +13,7 @@ import net.minecraft.world.level.levelgen.feature.configurations.TreeConfigurati
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.MegaPineFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.SpruceFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.GiantTrunkPlacer;
 import net.minecraftforge.registries.DeferredRegister;
@@ -36,7 +37,7 @@ public class ConfiguredFeatureInit {
             () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(FOOLS_OVERWORLD_REPLACEMENT.get(),9)));
 
 
-    //tree grower
+    //redwood grower
     public static final RegistryObject<ConfiguredFeature<?, ?>> REDWOOD =
             CONFIGURED_FEATURES.register("redwood", () ->
                     new ConfiguredFeature<>(Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
@@ -45,6 +46,16 @@ public class ConfiguredFeatureInit {
                             BlockStateProvider.simple(BlockInit.REDWOOD_LEAVES.get()),
                             //todo mess with these numbers
                             new MegaPineFoliagePlacer(ConstantInt.of(8), ConstantInt.of(8), ConstantInt.of(8)),
+                            new TwoLayersFeatureSize(1,0,2)).build()));
+    //pine grower
+    public static final RegistryObject<ConfiguredFeature<?, ?>> PINE =
+            CONFIGURED_FEATURES.register("pine", () ->
+                    new ConfiguredFeature<>(Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                            BlockStateProvider.simple(BlockInit.PINE_LOG.get()),
+                            new GiantTrunkPlacer(10,20,7),
+                            BlockStateProvider.simple(BlockInit.PINE_LEAVES.get()),
+                            //todo mess with these numbers
+                            new SpruceFoliagePlacer(ConstantInt.of(8), ConstantInt.of(8), ConstantInt.of(8)),
                             new TwoLayersFeatureSize(1,0,2)).build()));
 }
 

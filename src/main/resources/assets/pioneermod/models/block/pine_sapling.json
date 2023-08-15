@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "pioneermod:blocks/pine_sapling"
+  }
+}

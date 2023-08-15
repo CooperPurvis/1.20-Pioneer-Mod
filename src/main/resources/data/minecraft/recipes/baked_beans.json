@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "pioneermod:bean_block"
+  },
+  "result": "pioneermod:baked_beans",
+  "experience": 0.35,
+  "cookingtime": 200
+}

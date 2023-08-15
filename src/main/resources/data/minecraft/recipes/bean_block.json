@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "pioneermod:raw_beans"
+    }
+  },
+  "result": {
+    "item": "pioneermod:bean_block"
+  }
+}

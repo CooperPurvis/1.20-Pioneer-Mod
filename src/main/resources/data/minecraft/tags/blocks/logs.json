@@ -4,6 +4,10 @@
     "pioneermod:redwood_log",
     "pioneermod:redwood_wood",
     "pioneermod:stripped_redwood_log",
-    "pioneermod:stripped_redwood_wood"
+    "pioneermod:stripped_redwood_wood",
+    "pioneermod:pine_log",
+    "pioneermod:pine_wood",
+    "pioneermod:stripped_pine_log",
+    "pioneermod:stripped_pine_wood"
   ]
 }

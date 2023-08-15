@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "pioneermod:block/pine_slab"
+    },
+    "type=double": {
+      "model": "pioneermod:block/pine_planks"
+    },
+    "type=top": {
+      "model": "pioneermod:block/pine_slab"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "",
+  "ingredients": [
+    {
+      "tag": "pioneermod:cotton"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "item": "minecraft:string"
+  }
+}

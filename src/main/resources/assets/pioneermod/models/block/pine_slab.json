@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "pioneermod:blocks/pine_planks",
+    "side": "pioneermod:blocks/pine_planks",
+    "top": "pioneermod:blocks/pine_planks"
+  }
+}

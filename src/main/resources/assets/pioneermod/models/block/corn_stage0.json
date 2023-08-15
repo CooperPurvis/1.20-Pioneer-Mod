@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "pioneermod:blocks/corn_stage0"
+  }
+}

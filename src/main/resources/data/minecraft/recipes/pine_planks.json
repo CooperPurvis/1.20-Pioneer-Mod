@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "pioneermod:pine_logs"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "pioneermod:pine_planks"
+  }
+}

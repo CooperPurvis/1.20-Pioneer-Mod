@@ -39,11 +39,9 @@ public class ModFlammableRotatedPillarBlock extends RotatedPillarBlock {
             if(state.is(BlockInit.REDWOOD_LOG.get())){
                 return BlockInit.STRIPPED_REDWOOD_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
                 //makes sure the orientation of the log is the same when stripped
-
             }
             if(state.is(BlockInit.REDWOOD_LOG.get())){
                 return BlockInit.STRIPPED_REDWOOD_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
-
             }
         }
         return null;

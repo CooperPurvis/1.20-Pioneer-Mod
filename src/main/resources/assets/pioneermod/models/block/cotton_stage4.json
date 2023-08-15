@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "pioneermod:blocks/cotton_stage4"
+  }
+}

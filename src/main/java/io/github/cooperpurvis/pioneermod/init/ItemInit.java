@@ -24,6 +24,7 @@ public class ItemInit {
     public static final RegistryObject<Item> PYRITE = ITEMS.register("pyrite", () -> new Item(props()));
     public static final RegistryObject<Item> RAW_LEATHER = ITEMS.register("raw_leather", () -> new Item(props()));
     //food register
+    public static final RegistryObject<Item> CORN = ITEMS.register("corn",() -> new Item(props().food(Foods.CORN)));
     public static final RegistryObject<Item> BAKED_BEANS = ITEMS.register("baked_beans", () -> new Item(props().food(Foods.BAKED_BEANS)));
     public static final RegistryObject<Item> RAW_BEANS = ITEMS.register("raw_beans", () -> new Item(props().food(Foods.RAW_BEANS)));
     public static final RegistryObject<Item> RAW_BACON = ITEMS.register("raw_bacon", () -> new Item(props().food(Foods.RAW_BACON)));
@@ -62,6 +63,7 @@ public class ItemInit {
     public static class Foods {
         public static final FoodProperties BAKED_BEANS = new FoodProperties.Builder().nutrition(4).saturationMod(0.4f)
                 .effect(() -> new MobEffectInstance(MobEffects.JUMP, 200, 1), 0.1f).build();
+        public static final FoodProperties CORN = new FoodProperties.Builder().nutrition(1).saturationMod(0.3f).build();
         public static final FoodProperties RAW_BEANS = new FoodProperties.Builder().nutrition(1).saturationMod(0.2f).build();
         public static final FoodProperties RAW_BACON = new FoodProperties.Builder().nutrition(2).meat().saturationMod(0.5f).build();
         public static final FoodProperties COOKED_BACON = new FoodProperties.Builder().nutrition(6).meat().saturationMod(1.5f)
