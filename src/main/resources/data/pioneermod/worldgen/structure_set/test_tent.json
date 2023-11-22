@@ -1,0 +1,14 @@
+{
+      "structures": [
+    {
+      "structure": "pioneermod:test_tent",
+      "weight": 1
+    }
+  ],
+  "placement": {
+        "salt": 1001776,
+        "spacing": 10,
+            "separation": 4,
+        "type": "minecraft:random_spread"
+  }
+}

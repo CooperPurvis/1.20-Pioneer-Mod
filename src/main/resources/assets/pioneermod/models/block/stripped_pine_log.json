@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cube_column",
   "textures": {
-    "end": "pioneermod:blocks/stripped_pine_log_top",
+    "end": "pioneermod:blocks/pine_log_top",
     "side": "pioneermod:blocks/stripped_pine_log"
   }
 }

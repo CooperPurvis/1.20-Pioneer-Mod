@@ -52,8 +52,6 @@ public class BlockInit {
                     return 20;
                 }
             }, new Item.Properties().tab(PioneerMod.TAB));
-//    public static final RegistryObject<Block> PINE_STAIRS = register("pine_stairs",
-//            () -> new ModStairBlock()), new Item.Properties().tab(PioneerMod.TAB));
 
     public static final RegistryObject<Block> PINE_LOG = register("pine_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)),
@@ -100,6 +98,9 @@ public class BlockInit {
     public static final RegistryObject<Block> REDWOOD_FENCE = register("redwood_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD))
             , new Item.Properties().tab(PioneerMod.TAB));
+    public static final RegistryObject<Block> REDWOOD_FENCE_GATE = register("redwood_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD))
+            , new Item.Properties().tab(PioneerMod.TAB));
     public static final RegistryObject<Block> REDWOOD_PLANKS = register("redwood_planks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)){
                 @Override
@@ -115,9 +116,25 @@ public class BlockInit {
                     return 20;
                 }
             }, new Item.Properties().tab(PioneerMod.TAB));
-//    public static final RegistryObject<Block> REDWOOD_STAIRS = register("redwood_stairs",
-//            () -> new ModStairBlock(BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS))
-//            , new Item.Properties().tab(PioneerMod.TAB));
+    public static final RegistryObject<Block> REDWOOD_STAIRS = register("redwood_stairs",
+            () -> new StairBlock(() -> BlockInit.REDWOOD_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)), new Item.Properties().tab(PioneerMod.TAB));
+
+    public static final RegistryObject<Block> REDWOOD_BUTTON = register("redwood_button",
+            () -> new WoodButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON)),
+            new Item.Properties().tab(PioneerMod.TAB));
+
+    public static final RegistryObject<Block> REDWOOD_PRESSURE_PLATE = register("redwood_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE)),
+            new Item.Properties().tab(PioneerMod.TAB));
+
+    public static final RegistryObject<Block> REDWOOD_DOOR = register("redwood_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR)),
+            new Item.Properties().tab(PioneerMod.TAB));
+
+    public static final RegistryObject<Block> REDWOOD_TRAPDOOR = register("redwood_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR)),
+            new Item.Properties().tab(PioneerMod.TAB));
 
     public static final RegistryObject<Block> REDWOOD_LOG = register("redwood_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)),
@@ -156,13 +173,19 @@ public class BlockInit {
     public static final RegistryObject<Block> REDWOOD_SAPLING = register("redwood_sapling",
             () -> new SaplingBlock(new RedwoodTreeGrower(),(BlockBehaviour.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.GRASS))),
             new Item.Properties().tab(PioneerMod.TAB));
-    //todo add redwood door, trapdoor, boat, chestboat, button, fence gate, pressure plate, sign
+    //todo add redwood boat, chestboat, sign
 
     //ores
     public static final RegistryObject<Block> OVERWORLD_FOOLS_ORE = register("overworld_fools_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).requiresCorrectToolForDrops().strength(1.0F, 1.0F)),
             new Item.Properties().tab(PioneerMod.TAB));
     public static final RegistryObject<Block> DEEPSLATE_FOOLS_ORE = register("deepslate_fools_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).requiresCorrectToolForDrops().strength(1.0F, 1.0F)),
+            new Item.Properties().tab(PioneerMod.TAB));
+    public static final RegistryObject<Block> OVERWORLD_SALT_ORE = register("overworld_salt_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).requiresCorrectToolForDrops().strength(1.0F, 1.0F)),
+            new Item.Properties().tab(PioneerMod.TAB));
+    public static final RegistryObject<Block> DEEPSLATE_SALT_ORE = register("deepslate_salt_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).requiresCorrectToolForDrops().strength(1.0F, 1.0F)),
             new Item.Properties().tab(PioneerMod.TAB));
 
