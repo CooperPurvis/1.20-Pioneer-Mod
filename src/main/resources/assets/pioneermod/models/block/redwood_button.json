@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "pioneermod:blocks/redwood_planks"
+  }
+}

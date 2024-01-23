@@ -23,6 +23,7 @@ public class ItemInit {
     public static final RegistryObject<Item> CANVAS = ITEMS.register("canvas", () -> new Item(props()));
     public static final RegistryObject<Item> PYRITE = ITEMS.register("pyrite", () -> new Item(props()));
     public static final RegistryObject<Item> RAW_LEATHER = ITEMS.register("raw_leather", () -> new Item(props()));
+    public static final RegistryObject<Item> SALT = ITEMS.register("salt", () -> new Item(props()));
     //food register
     public static final RegistryObject<Item> CORN = ITEMS.register("corn",() -> new Item(props().food(Foods.CORN)));
     public static final RegistryObject<Item> BAKED_BEANS = ITEMS.register("baked_beans", () -> new Item(props().food(Foods.BAKED_BEANS)));

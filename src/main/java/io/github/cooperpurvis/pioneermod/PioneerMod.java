@@ -2,6 +2,7 @@ package io.github.cooperpurvis.pioneermod;
 
 import io.github.cooperpurvis.pioneermod.block.BlockInit;
 import io.github.cooperpurvis.pioneermod.init.*;
+import io.github.cooperpurvis.pioneermod.loot.ModLoadModifier;
 import io.github.cooperpurvis.pioneermod.world.feature.ConfiguredFeatureInit;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -28,6 +29,7 @@ public class PioneerMod {
         PaintingInit.PAINTINGS.register(bus);
         ConfiguredFeatureInit.CONFIGURED_FEATURES.register(bus);
         PlacedFeatureInit.PLACED_FEATURES.register(bus);
+        ModLoadModifier.register(bus);
     }
 
     //creative mode tab

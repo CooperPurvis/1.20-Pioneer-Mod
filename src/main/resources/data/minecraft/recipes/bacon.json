@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "",
+  "key": {
+    "#": {
+      "item": "pioneermod:salt"
+    },
+    "X": {
+      "item": "minecraft:porkchop"
+    }
+  },
+  "pattern": [
+    "#X"
+  ],
+  "result": {
+    "count": 6,
+    "item": "pioneermod:raw_bacon"
+  }
+}
