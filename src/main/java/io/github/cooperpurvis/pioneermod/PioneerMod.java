@@ -5,6 +5,7 @@ import io.github.cooperpurvis.pioneermod.init.*;
 import io.github.cooperpurvis.pioneermod.world.feature.ConfiguredFeatureInit;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -43,6 +44,7 @@ public class PioneerMod {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event){
             ItemBlockRenderTypes.setRenderLayer(BlockInit.BEAN_CROP.get(), RenderType.cutout());
+            //net.minecraftforge.fml.splash.SplashProgress.addSplashes(CustomSplash.class);
         }
     }
 }

@@ -156,7 +156,7 @@ public class BlockInit {
     public static final RegistryObject<Block> REDWOOD_SAPLING = register("redwood_sapling",
             () -> new SaplingBlock(new RedwoodTreeGrower(),(BlockBehaviour.Properties.of(Material.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.GRASS))),
             new Item.Properties().tab(PioneerMod.TAB));
-    //todo add redwood door, trapdoor, boat, chestboat, button, fence gate, pressure plate, sign
+    //todo add door, trapdoor, boat, chestboat, button, fence gate, pressure plate, sign, button
 
     //ores
     public static final RegistryObject<Block> OVERWORLD_FOOLS_ORE = register("overworld_fools_ore",
