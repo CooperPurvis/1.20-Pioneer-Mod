@@ -8,7 +8,9 @@ import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -27,26 +29,26 @@ public class PioneerMod {
         ItemInit.ITEMS.register(bus);
         BlockInit.BLOCKS.register(bus);
         PaintingInit.PAINTINGS.register(bus);
-        ConfiguredFeatureInit.CONFIGURED_FEATURES.register(bus);
-        PlacedFeatureInit.PLACED_FEATURES.register(bus);
+        //ConfiguredFeatureInit.CONFIGURED_FEATURES.register(bus);
+        //PlacedFeatureInit.PLACED_FEATURES.register(bus);
         ModLoadModifier.register(bus);
+
     }
 
     //creative mode tab
-    public static final CreativeModeTab TAB = new CreativeModeTab(MODID) {
-        @Override
-        public ItemStack makeIcon() {
-            return ItemInit.COTTON.get().getDefaultInstance();
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ItemInit.RAW_RAINBOW_TROUT);
+
         }
-
-
-    };
+    }
     @Mod.EventBusSubscriber(modid = MOD_ID,bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class ClientModEvents{
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event){
-            ItemBlockRenderTypes.setRenderLayer(BlockInit.BEAN_CROP.get(), RenderType.cutout());
+            //ItemBlockRenderTypes.setRenderLayer(BlockInit.BEAN_CROP.get(), RenderType.cutout());
             //net.minecraftforge.fml.splash.SplashProgress.addSplashes(CustomSplash.class);
         }
     }
+
 }

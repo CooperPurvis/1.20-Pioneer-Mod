@@ -32,6 +32,8 @@ public class ItemInit {
     public static final RegistryObject<Item> COOKED_BACON = ITEMS.register("cooked_bacon", () -> new Item(props().food(Foods.COOKED_BACON)));
     public static final RegistryObject<Item> MOREL_ITEM = ITEMS.register("morel_item", () -> new Item(props().food(Foods.MOREL_ITEM)));
     public static final RegistryObject<Item> CHANTERELLES_ITEM = ITEMS.register("chanterelles_item", () -> new Item(props().food(Foods.CHANTERELLES_ITEM)));
+    public static final RegistryObject<Item> BEEF_STEAK_POLYPORE_ITEM = ITEMS.register("beef_steak_polypore_item", () -> new Item(props().food(Foods.BEEF_STEAK_POLYPORE_ITEM)));
+    public static final RegistryObject<Item> INDIGO_MILKCAP_ITEM = ITEMS.register("indigo_milkcap_item", () -> new Item(props().food(Foods.INDIGO_MILKCAP_ITEM)));
     //todo fix fishing loot tables
     public static final RegistryObject<Item> RAW_CRAB = ITEMS.register("raw_crab", () -> new Item(props().food(Foods.RAW_CRAB)));
     public static final RegistryObject<Item> COOKED_CRAB = ITEMS.register("cooked_crab", () -> new Item(props().food(Foods.COOKED_CRAB)));
@@ -48,14 +50,16 @@ public class ItemInit {
     public static final RegistryObject<AxeItem> COPPER_AXE = ITEMS.register("copper_axe", () -> new AxeItem(ToolTiers.COPPER, 6, -3.0f, props()));
     public static final RegistryObject<HoeItem> COPPER_HOE = ITEMS.register("copper_hoe", () -> new HoeItem(ToolTiers.COPPER, 0, -3.0f, props()));
     //armour
-    public static final RegistryObject<ArmorItem> COPPER_HELMET = ITEMS.register("copper_helmet", () -> new ArmorItem(ArmorTiers.COPPER, EquipmentSlot.HEAD, props()));
-    public static final RegistryObject<ArmorItem> COPPER_CHESTPLATE = ITEMS.register("copper_chestplate", () -> new ArmorItem(ArmorTiers.COPPER, EquipmentSlot.CHEST, props()));
-    public static final RegistryObject<ArmorItem> COPPER_LEGGINGS = ITEMS.register("copper_leggings", () -> new ArmorItem(ArmorTiers.COPPER, EquipmentSlot.LEGS, props()));
-    public static final RegistryObject<ArmorItem> COPPER_BOOTS = ITEMS.register("copper_boots", () -> new ArmorItem(ArmorTiers.COPPER, EquipmentSlot.FEET, props()));
+    public static final RegistryObject<ArmorItem> COPPER_HELMET = ITEMS.register("copper_helmet", () -> new ArmorItem(ArmorTiers.COPPER, ArmorItem.Type.HELMET, props()));
+    public static final RegistryObject<ArmorItem> COPPER_CHESTPLATE = ITEMS.register("copper_chestplate", () -> new ArmorItem(ArmorTiers.COPPER, ArmorItem.Type.CHESTPLATE, props()));
+    public static final RegistryObject<ArmorItem> COPPER_LEGGINGS = ITEMS.register("copper_leggings", () -> new ArmorItem(ArmorTiers.COPPER, ArmorItem.Type.LEGGINGS, props()));
+    public static final RegistryObject<ArmorItem> COPPER_BOOTS = ITEMS.register("copper_boots", () -> new ArmorItem(ArmorTiers.COPPER, ArmorItem.Type.BOOTS, props()));
 
     //adds creative mode tab
+
+    //todo fix this
     private static Item.Properties props() {
-        return new Item.Properties().tab(PioneerMod.TAB);
+        return new Item.Properties().setNoRepair();
     }
 
 
@@ -88,6 +92,10 @@ public class ItemInit {
                 .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 320, 0), 0.25f).alwaysEat().build();
         public static final FoodProperties CHANTERELLES_ITEM = new FoodProperties.Builder().nutrition(4).saturationMod(0.4f)
                 .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 320, 0), 0.25f).alwaysEat().build();
+        public static final FoodProperties BEEF_STEAK_POLYPORE_ITEM = new FoodProperties.Builder().nutrition(4).saturationMod(0.4f)
+                .effect(() -> new MobEffectInstance(MobEffects.HEALTH_BOOST, 320, 0), 0.25f).alwaysEat().build();
+        public static final FoodProperties INDIGO_MILKCAP_ITEM = new FoodProperties.Builder().nutrition(4).saturationMod(0.4f)
+                .effect(() -> new MobEffectInstance(MobEffects.POISON, 320, 0), 0.25f).alwaysEat().build();
     }
 
         public static class ToolTiers {
