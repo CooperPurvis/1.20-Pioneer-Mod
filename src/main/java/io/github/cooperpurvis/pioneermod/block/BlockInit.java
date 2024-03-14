@@ -3,6 +3,7 @@ package io.github.cooperpurvis.pioneermod.block;
 import io.github.cooperpurvis.pioneermod.PioneerMod;
 import io.github.cooperpurvis.pioneermod.block.custom.*;
 import io.github.cooperpurvis.pioneermod.init.ItemInit;
+import io.github.cooperpurvis.pioneermod.world.feature.tree.RedwoodTreeGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
@@ -174,9 +175,9 @@ public class BlockInit {
                 }
             }, new Item.Properties());
                 //todo fix cutout
-//    public static final RegistryObject<Block> REDWOOD_SAPLING = register("redwood_sapling",
-//            () -> new SaplingBlock(new RedwoodTreeGrower(),(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noCollission().randomTicks().instabreak().sound(SoundType.GRASS))),
-//            new Item.Properties());
+    public static final RegistryObject<Block> REDWOOD_SAPLING = register("redwood_sapling",
+            () -> new SaplingBlock(new RedwoodTreeGrower(),(BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).noCollission().randomTicks().instabreak().sound(SoundType.GRASS))),
+            new Item.Properties());
     //todo add redwood boat, chestboat, sign
 
     //ores
